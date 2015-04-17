@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+echo "-----> Installing FreeTDS"
+# change to the the BUILD_DIR ($1)
+cd $1
+curl https://github.com/foraker/FreeTDS-Cedar-14/blob/master/freetds.tar.gz -s -O
+mkdir -p vendor/freetds
+tar -C vendor/freetds -xvf freetds.tar.gz
